@@ -1,0 +1,53 @@
+{% extends 'temp/hod.html' %}
+{% block base %}
+<form method="POST">
+    {% csrf_token %}
+<h1 align="center"><b>SET TIME TABLE</b></h1>
+<table align="center">
+	<tr>
+		<td><b>DAY</b></td>
+		<td>
+			<select required="" name="day">
+				<option value="">----SELECT----</option>
+				<option value="MONDAY">MONDAY</option>
+				<option value="TUESDAY">TUESDAY</option>
+				<option value="WEDNESDAY">WEDNESDAY</option>
+				<option value="THURSDAY">THURSDAY</option>
+				<option value="FRIDAY">FRIDAY</option>
+				<option value="SATURDAY">SATURDAY</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td><b>PERIOD</b></td>
+		<td>
+			<select required="" name="period">
+				<option value="">----SELECT----</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td><b>SUBJECT</b></td>
+		<td><input type="text" name="subject" required="" class="form-control"></td>
+	</tr>
+    <tr>
+		<td><b>TEACHER NAME</b></td>
+		<td><input type="text" name="teacher_name" required="" class="form-control"></td>
+	</tr>
+	<tr align="left">
+		<td><input align="" type="submit" name="submit" value="SUBMIT" class="btn btn-control"></td>
+		<td><input align="right" type="submit" name="cancel" value="CANCEL" class="btn btn-control"></td>
+	</tr>
+    <tr>
+        <td colspan="2" align="left"><b>FILL UP IN THE ORDER</b></td>
+    </tr>
+</table>
+</form>
+{% endblock %}

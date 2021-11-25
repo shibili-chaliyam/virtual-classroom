@@ -1,0 +1,42 @@
+{% extends 'temp/hod.html' %}
+{% block base %}
+<form method="POST">
+    {% csrf_token %}
+	<h1 align="center">UPDATE TEACHER</h1>
+	<table align="center">
+        {% if objval %}
+        {% for obj in objval %}
+	<tr>
+	<td><b>Teacher Name</b></td>
+	<td><input type="text" name="name" required="" class="form-control" value="{{ obj.name }}"></td>
+</tr>
+<tr>
+	<td><b>Teacher Subject</b></td>
+	<td><input type="text" name="subject" required="" class="form-control" value="{{ obj.subject }}"></textarea></td>
+</tr>
+<tr>
+	<td><b>Teacher Department</b></td>
+	<td><input type="text" name="dep_id" required="" class="form-control" value="{{ obj.dep_name }}"></textarea></td>
+</tr>
+<tr>
+	<td><b>Teacher Qualification</b></td>
+	<td><input type="text" name="qualification" required="" class="form-control" value="{{ obj.qualification }}"></textarea></td>
+</tr>
+<tr>
+	<td><b>Teacher Address</b></td>
+	<td><input type="text" name="address" required="" class="form-control" value="{{ obj.address }}"></textarea></td>
+</tr>
+<tr>
+	<td><b>Teacher Mobile</b></td>
+	<td><input type="text" name="mob_no" required="" class="form-control" value="{{ obj.mob_no }}"></td>
+</tr>
+<tr>
+
+	<td align="center"><input type="submit" name="submit" value="UPDATE" class="btn btn-control"></td>
+
+</tr>
+        {% endfor %}
+{% endif %}
+</table>
+</form>
+{% endblock %}

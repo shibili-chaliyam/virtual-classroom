@@ -1,0 +1,114 @@
+{% extends 'temp/student.html' %}
+{% block base %}
+<table align="center" border="1">
+
+        <tr align="center">
+        <td><b>DAY</b></td>
+        <td><b>PERIOD</b></td>
+        <td><b>SUBJECT</b></td>
+        <td><b>TEACHER</b></td>
+        </tr>
+     {% if objval %}
+    {% for obj in objval %}
+    <tr align="center">
+        <td>{{ obj.day }}</td>
+        <td>{{ obj.period }}</td>
+        <td>{{ obj.subject }}</td>
+        <td>{{ obj.teacher_name }}</td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+</table>
+{% endblock %}
+
+
+
+
+
+{#<table align="center" border="1">#}
+{#    <tr  align="center" >#}
+{#        <td><b>Period</b></td>#}
+{##}
+{#        <td><b>Monday</b></td>#}
+{#        <td><b>Tuesday</b></td>#}
+{#        <td><b>Wednesday</b></td>#}
+{#        <td><b>Thursday</b></td>#}
+{#        <td><b>Friday</b></td>#}
+{#        <td><b>Saturday</b></td>#}
+{##}
+{#    </tr>#}
+{#    {% if objval %}#}
+{#    {% for obj in objval %}#}
+{#    <tr  align="center">#}
+{#        <td>1</td>#}
+{#        <td>{{ obj. }}</td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#    </tr>#}
+{##}
+{#    <tr  align="center">#}
+{#        <td>2</td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#    </tr>#}
+{#    <tr  align="center">#}
+{#        <td>3</td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#    </tr>#}
+{#    <tr  align="center">#}
+{#        <td>4</td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#    </tr>#}
+{#    <tr>#}
+{#        <td colspan="7" align="center"><b>LAUNCH BREAK</b></td>#}
+{##}
+{#    </tr>#}
+{#    <tr  align="center">#}
+{#        <td>5</td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#    </tr>#}
+{#    <tr  align="center">#}
+{#        <td>6</td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#    </tr>#}
+{#    <tr  align="center">#}
+{#        <td>7</td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#        <td></td>#}
+{#    </tr>#}
+{##}
+{##}
+{##}
+{##}
+{#</table>#}

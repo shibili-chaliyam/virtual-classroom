@@ -1,0 +1,20 @@
+{% extends 'temp/student.html' %}
+{% block base %}
+<table align="center" border="1">
+
+    <tr>
+        <td align="center"><b>Exam Date</b></td>
+        <td align="center"><b>Exam Time</b></td>
+        <td align="center"><b>Subject</b></td>
+    </tr>
+    {% if objval %}
+    {% for obj in objval %}
+    <tr>
+        <td>{{ obj.date }}</td>
+        <td>{{ obj.start_time}} - {{ obj.ending_time }}</td>
+        <td>{{ obj.subject }}</td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+</table>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'temp/hod.html' %}
+{% block base %}
+<form method="POST">
+    {% csrf_token %}
+	<h1 align="center">REGISTER TEACHER</h1>
+	<table align="center">
+	<tr>
+	<td><b>Teacher Name</b></td>
+	<td><input type="text" name="name" required="" class="form-control"></td>
+</tr>
+<tr>
+	<td><b>Teacher Subject</b></td>
+	<td><textarea  name="subject" required="" class="form-control"></textarea></td>
+</tr>
+<tr>
+	<td><b>Teacher Department</b></td>
+	<td><select name="dept">
+    <option value="">SELECT</option>
+		{% for ob in val %}
+    <option value="{{ ob.name }}">{{ ob.name }}</option>
+    	{% endfor %}
+	</select>
+    </td>
+</tr>
+
+<tr>
+	<td><b>Teacher Qualification</b></td>
+	<td><textarea name="qualification" required="" class="form-control"></textarea></td>
+</tr>
+<tr>
+	<td><b>Teacher Address</b></td>
+	<td><textarea name="address" required="" class="form-control"></textarea></td>
+</tr>
+<tr>
+	<td><b>Teacher Mobile</b></td>
+	<td><input type="text" name="mob_no" required="" class="form-control"></td>
+</tr>
+<tr>
+	<td><b>Password</b></td>
+	<td><input type="password" name="pass" required="" class="form-control"></td>
+</tr>
+<tr>
+
+	<td align="center"><input type="submit" name="submit" value="SUBMIT" class="btn btn-control"></td>
+	<td align="right"><input type="submit" name="cancel" value="CANCEL" class="btn btn-control"></td>
+</tr>
+
+</table>
+</form>
+
+{% endblock %}

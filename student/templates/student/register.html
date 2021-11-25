@@ -1,0 +1,37 @@
+{% extends 'temp/teachers.html' %}
+{% block base %}
+<form method="POST">
+    {% csrf_token %}
+    	<h1 align="center">STUDENT REGISTRATION</h1>
+	<table align="center">
+	<tr>
+	<td><b>Student Name</b></td>
+	<td><input type="text" name="name" required="" class="form-control"></td>
+</tr>
+<tr>
+	<td><b>Course</b></td>
+	<td><input type="text" name="course" required="" class="form-control"></td>
+</tr>
+<tr>
+	<td><b>Semester</b></td>
+	<td><input type="text" name="semester" required="" class="form-control"></td>
+</tr>
+<tr>
+	<td><b>Address</b></td>
+	<td><input type="text" name="address" required="" class="form-control"></td>
+</tr>
+        <tr>
+	<td><b>Mobile</b></td>
+	<td><input type="text" name="mobile" required="" class="form-control"></td>
+</tr>
+        <tr>
+	<td><b>Password</b></td>
+	<td><input type="password" name="pass" required="" class="form-control"></td>
+</tr>
+        <tr>
+    <td><input type="submit" name="accept" value="ACCEPT" required="" class="form-control"></td>
+	<td><input type="submit" name="cancel" value="CANCEL" required="" class="form-control"></td>
+</tr>
+</form>
+
+{% endblock %}

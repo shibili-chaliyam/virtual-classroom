@@ -1,0 +1,32 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+<form method="POST">
+    {% csrf_token %}
+	<h1 align="center">POST DEPARTMENT INFORMATION</h1>
+	<table align="center">
+		<tr>
+			<td><b>DEPARTMENT</b></td>
+			<td>
+				<select name="name">
+					<option value="">-----SELECT----</option>
+					<option value="Computer Science">Computer Science</option>
+					<option value="Electronics">Electronics</option>
+					<option value="Biology">Biology</option>
+					<option value="Commerce">Commerce</option>
+					<option value="Humanities">Humanities</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td><b>INFORMATION</b></td>
+			<td><textarea rows="20" cols="40" name="info" required="" class="form-control"></textarea></td>
+		</tr>
+		<tr>
+
+	<td align="center"><input type="submit" name="submit" value="SUBMIT" class="btn btn-control"></td>
+	<td align="right"><input type="submit" name="cancel" value="CANCEL" class="btn btn-control"></td>
+</tr>
+	</table>
+</form>
+
+{% endblock %}

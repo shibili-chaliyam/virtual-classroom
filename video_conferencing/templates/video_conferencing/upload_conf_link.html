@@ -1,0 +1,22 @@
+{% extends 'temp/teachers.html' %}
+{% block base %}
+<form method="POST">
+    {% csrf_token %}
+<h1 align="center">SHARE MEETING LINK</h1>
+<table align="center">
+	<tr>
+		<td><b>MEETING LINK</b></td>
+		<td><input type="text" name="meet_link" required="" class="form-control"></td>
+	</tr>
+    <tr>
+        <td><b>SEMESTER</b></td>
+        <td><input type="text" name="semester" required="" class="form-control"></td>
+    </tr>
+	<tr>
+		<td></td>
+		<td><input align="center" type="submit" name="upload" value="UPLOAD" class="btn btn-control"></td>
+		<td><input align="right" type="submit" name="cancel" value="CANCEL" class="btn btn-control"></td>
+	</tr>
+</table>
+    </form>
+{% endblock %}

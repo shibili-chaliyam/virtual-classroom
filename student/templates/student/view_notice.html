@@ -1,0 +1,18 @@
+{% extends 'temp/student.html' %}
+{% block base %}
+<table align="left" border="1">
+
+    <tr align="center">
+        <th>Date </th>
+        <th>Notice</th>
+    </tr>
+     {% if objval %}
+    {% for obj in objval %}
+    <tr>
+        <td>{{ obj.date }}</td>
+        <td>{{ obj.content }}</td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+</table>
+{% endblock %}

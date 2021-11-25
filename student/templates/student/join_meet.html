@@ -1,0 +1,19 @@
+{% extends 'temp/student.html' %}
+{% block base %}
+<table align="center" border="1">
+    <tr>
+        <th>SEMESTER</th>
+        <th colspan="2">MEETING LINK</th>
+    </tr>
+    {% if objval %}
+    {% for obj in objval %}
+    <tr>
+        <td>{{ obj.semester }}</td>
+        <td>{{ obj.link }}</td>
+        <td><a href="{{ obj.link }}"><input type="button" value="Join Meeting"></a> </td>
+
+    </tr>
+    {% endfor %}
+    {% endif %}
+</table>
+{% endblock %}

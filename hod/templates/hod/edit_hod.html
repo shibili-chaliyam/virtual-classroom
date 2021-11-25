@@ -1,0 +1,45 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+<form method="POST">
+    {% csrf_token %}
+	<h1 align="center">Edit HOD</h1>
+	<table align="center">
+       {% if objval %}
+	<tr>
+	<td><b>HOD Name</b></td>
+	<td><input type="text" name="hod_name" value="{{ obj.name }}" class="form-control"></td>
+</tr>
+<tr>
+	<td><b>HOD Department</b></td>
+	<td><input type="text" name="hod_dep" value="{{ obj.dep_id }}" class="form-control"></td>
+</tr>
+<tr>
+	<td><b>HOD Qualification</b></td>
+	<td><input type="text" name="hod_qual" value="{{ obj.qualification }}" class="form-control"></td>
+</tr>
+<tr>
+	<td><b>HOD Address</b></td>
+	<td><input type="text" name="hod_address" value="{{ obj.address }}" class="form-control"></td>
+</tr>
+<tr>
+	<td><b>HOD Mobile</b></td>
+	<td><input type="text" name="mobile" value="{{ obj.mobile }}" class="form-control"></td>
+</tr>
+<!-- <tr>
+	<td><b>User Name</b></td>
+	<td><input type="text" name="usern" value="" class="form-control"></td>
+</tr>
+<tr>
+	<td><b>Password</b></td>
+	<td><input type="password" name="passw" value="" class="form-control"></td>
+</tr> -->
+<tr>
+
+	<td align="center"><input type="submit" name="submit" value="SUBMIT" class="btn btn-control"></td>
+	<td align="right"><input type="submit" name="cancel" value="CANCEL" class="btn btn-control"></td>
+</tr>
+{% endif %}
+</table>
+
+</form>
+{% endblock %}

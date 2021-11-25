@@ -1,0 +1,20 @@
+{% extends 'temp/student.html' %}
+{% block base %}
+<table align="left" border="1">
+    <tr align="center">
+        <th>Semester</th>
+        <th colspan="2" align="center">Study Material</th>
+    </tr>
+    {% if objval %}
+    {% for obj in objval %}
+    <tr align="center">
+        <td>{{ obj.semester }}</td>
+        <td>{{ obj.material }}</td>
+        <td><a href="/static/{{ obj.material }}" download="">Download</a></td>
+
+
+    </tr>
+    {% endfor %}
+    {% endif %}
+</table>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'temp/teachers.html' %}
+{% block base %}
+<h1 align="center">POST INTERNAL EXAMINATION DETAILS</h1>
+<form method="POST">
+    {% csrf_token %}
+<table align="center">
+	<tr>
+		<td><b>EXAM DATE</b></td>
+		<td><input type="DATE" name="exam_date" required="" class="form-control"></td>
+	</tr>
+	<tr>
+		<td><b>EXAM TIME</b></td>
+		<td><input type="TIME" name="exam_time" required="" class="form-control"></td>
+		<td><input type="TIME" name="exam_time2" required="" class="form-control"></td>
+	</tr>
+	<tr>
+		<td><b>SUBJECT</b></td>
+		<td><input type="text" name="exam_sub" required="" class="form-control"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input align="center" type="submit" name="submit" value="SUBMIT" class="btn btn-control"></td>
+		<td><input align="right" type="submit" name="cancel" value="CANCEL" class="btn btn-control"></td>
+	</tr>
+</table>
+</form>
+{% endblock %}

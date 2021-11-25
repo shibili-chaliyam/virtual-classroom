@@ -1,0 +1,26 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+<h1 align="center">MANAGE HOD</h1>
+<table align="center" border="2">
+	<tr>
+		<th><b>NAME</b></th>
+		<th><b>DEPARTMENT</b></th>
+		<th><b>QUALIFICATION</b></th>
+		<th><b>ADDRESS</b></th>
+		<th><b>MOBILE</b></th>
+	</tr>
+    {% if objval %}
+    {% for obj in objval %}
+	<tr>
+		<td>{{ obj.name }}</td>
+		<td>{{ obj.dep_id }}</td>
+		<td>{{ obj.qualification }}</td>
+		<td>{{ obj.address }}</td>
+		<td>{{ obj.mobile }}</td>
+		<td><a href="{%  url 'edit' idh=obj.id %}">edit</a></td>
+		<td><a href="{%  url 'delete' ich=obj.id %}">delete</a></td>
+	</tr>
+    {% endfor %}
+{% endif %}
+</table>
+{% endblock %}

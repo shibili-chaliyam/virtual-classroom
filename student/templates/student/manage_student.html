@@ -1,0 +1,26 @@
+{% extends 'temp/teachers.html' %}
+{% block base %}
+<h1 align="center">Manage Student</h1>
+<table align="center" border="2">
+	<tr>
+		<th><b>Name</b></th>
+		<th><b>Course</b></th>
+		<th><b>Semester</b></th>
+		<th><b>Address</b></th>
+		<th><b>Mobile</b></th>
+	</tr>
+    {% if objval %}
+    {% for obj in objval %}
+	<tr>
+		<td>{{ obj.name }}</td>
+		<td>{{ obj.course }}</td>
+		<td>{{ obj.semester }}</td>
+		<td>{{ obj.address }}</td>
+		<td>{{ obj.contact }}</td>
+		<td><a href="{%  url 'approve' idd=obj.id %}">approve</a></td>
+		<td><a href="{%  url 'reject' idd=obj.id %}">reject</a></td>
+	</tr>
+{% endfor %}
+{% endif %}
+</table>
+{% endblock %}

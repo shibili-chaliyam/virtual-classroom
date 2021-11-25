@@ -1,0 +1,45 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+<form method="POST">
+    {% csrf_token %}
+	<h1 align="center">REGISTER HOD</h1>
+	<table align="center">
+	<tr>
+	<td><b>HOD Name</b></td>
+	<td><input type="text" name="hod_name" required="" class="form-control"></td>
+</tr>
+<tr>
+	<td><b>HOD Department</b></td>
+	<td><select name="dep_id">
+        <option value="">SELECT</option>
+        {% for ob in val %}
+            <option value={{ ob.name }}>{{ ob.name }}</option>
+                {% endfor %}
+    </select> </td>
+</tr>
+<tr>
+	<td><b>HOD Qualification</b></td>
+	<td><textarea name="hod_qual" required="" class="form-control"></textarea></td>
+</tr>
+<tr>
+	<td><b>HOD Address</b></td>
+	<td><textarea name="hod_address" required="" class="form-control"></textarea></td>
+</tr>
+<tr>
+	<td><b>HOD Mobile</b></td>
+	<td><input type="text" name="mobile" required="" class="form-control"></td>
+</tr>
+<tr>
+	<td><b>Password</b></td>
+	<td><input type="password" name="passw" required="" class="form-control"></td>
+</tr>
+<tr>
+
+	<td align="center"><input type="submit" name="submit" value="SUBMIT" class="btn btn-control"></td>
+	<td align="right"><input type="submit" name="cancel" value="CANCEL" class="btn btn-control"></td>
+</tr>
+
+</table>
+
+</form>
+{% endblock %}

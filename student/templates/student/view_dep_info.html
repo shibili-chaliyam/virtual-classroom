@@ -1,0 +1,23 @@
+{% extends 'temp/student.html' %}
+{% block base %}
+{#<table align="center" border="1">#}
+{#    <tr>#}
+{#        <td align="center"><b>Department</b></td>#}
+{#        <td align="center"><b>Info</b></td>#}
+{#    </tr>#}
+{#    {% if objval %}#}
+{#    {% for obj in objval %}#}
+{#    <tr>#}
+{#        <td>{{ obj.name }}</td>#}
+{#        <td>{{ obj.info }}</td>#}
+{#    </tr>#}
+{#    {% endfor %}#}
+{#{% endif %}#}
+{#</table>#}
+{% if objval %}
+{% for obj in objval %}
+    <h1 align="left"><u>{{ obj.name }}</u></h1>
+<p align="left">{{ obj.info }}</p>
+{% endfor %}
+{% endif %}
+{% endblock %}

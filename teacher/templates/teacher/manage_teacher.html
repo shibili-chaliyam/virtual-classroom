@@ -1,0 +1,32 @@
+{% extends 'temp/hod.html' %}
+{% block base %}
+{% csrf_token %}
+<h1 align="center">MANAGE TEACHER</h1>
+<table border="2" align="center">
+	<tr>
+		<th>NAME</th>
+		<th>SUBJECT</th>
+		<th>DEPARTMENT</th>
+		<th>ADDRESS</th>
+		<th>QUALIFICATION</th>
+		<th>MOBILE</th>
+	</tr>
+    {% if objval %}
+    {% for obj in objval %}
+
+	<tr>
+		<td>{{ obj.name }}</td>
+		<td>{{ obj.subject }}</td>
+		<td>{{ obj.dep_name }}</td>
+		<td>{{ obj.address }}</td>
+		<td>{{ obj.qualification }}</td>
+		<td>{{ obj.mob_no }}</td>
+       <td><a href="{% url 'edit' idd=obj.id %}">edit</a></td>
+		<td><a href="{% url 'delete' icc=obj.id %}">delete</a></td>
+	</tr>
+
+    {% endfor %}
+{% endif %}
+</table>
+
+{% endblock %}
